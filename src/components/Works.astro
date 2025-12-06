@@ -6,7 +6,7 @@ const works = [
     description: "An exploration of natural textures and refined forms",
     category: "Collection",
     image:
-      "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_03.jpg",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const works = [
     description: "The essence of clothing reduced to its simplest expression",
     category: "Series",
     image:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_05.jpg",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const works = [
     description: "Iconic creations that define the brand's identity",
     category: "Collection",
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_08.jpg",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const works = [
     description: "Meeting of traditional craftsmanship and contemporary design",
     category: "Special Project",
     image:
-      "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_11.jpg",
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const works = [
     description: "Harmony between comfort and elegance in neutral tones",
     category: "Collection",
     image:
-      "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_14.jpg",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const works = [
     description: "Conceptual research on structure and volume",
     category: "Research",
     image:
-      "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=800&q=80",
+      "https://d168xaea3f86zy.cloudfront.net/magfile/upload/2020spring/7/07_16.jpg",
   },
 ];
 ---
@@ -54,6 +54,7 @@ const works = [
 <section id="works" class="works">
   <div class="container">
     <h2>Works</h2>
+    <hr class="section-divider" />
     <div class="grid">
       {
         works.map((work) => (
@@ -87,9 +88,22 @@ const works = [
 
   .container h2 {
     font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-weight: 200;
     text-align: center;
+  }
+
+  .section-divider {
+    width: 80px;
+    height: 2px;
+    border: none;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      #f5ead6 50%,
+      transparent 100%
+    );
+    margin: 0 auto 4rem;
   }
 
   .grid {

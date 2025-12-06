@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Lato:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500&family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
@@ -41,7 +41,7 @@ const { title } = Astro.props;
     --color-link: #d4a574;
     --color-link-hover: #e8b98a;
     --font-main: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-serif: "Noto Serif", Georgia, serif;
   }
 
   html {
@@ -55,11 +55,17 @@ const { title } = Astro.props;
     line-height: 1.6;
   }
 
-  h1,
-  h2,
-  h3 {
+  h1 {
     font-family: var(--font-serif);
     font-weight: 300;
     letter-spacing: 0.02em;
+  }
+
+  h2,
+  h3 {
+    font-family: var(--font-main);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
 </style>
