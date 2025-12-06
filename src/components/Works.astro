@@ -1,143 +1,155 @@
 ---
 const works = [
-	{
-		id: 1,
-		title: "Collection Printemps 2024",
-		description: "Une exploration des textures naturelles et des formes épurées",
-		category: "Collection"
-	},
-	{
-		id: 2,
-		title: "Série Minimaliste",
-		description: "L'essence du vêtement réduite à sa plus simple expression",
-		category: "Série"
-	},
-	{
-		id: 3,
-		title: "Pièces Signature",
-		description: "Des créations iconiques qui définissent l'identité de la marque",
-		category: "Collection"
-	},
-	{
-		id: 4,
-		title: "Collaboration Artisanale",
-		description: "Rencontre entre savoir-faire traditionnel et design contemporain",
-		category: "Projet Spécial"
-	},
-	{
-		id: 5,
-		title: "Collection Automne 2023",
-		description: "Harmonie entre confort et élégance dans des tons neutres",
-		category: "Collection"
-	},
-	{
-		id: 6,
-		title: "Études de Forme",
-		description: "Recherches conceptuelles sur la structure et le volume",
-		category: "Recherche"
-	}
+  {
+    id: 1,
+    title: "Spring 2024 Collection",
+    description: "An exploration of natural textures and refined forms",
+    category: "Collection",
+    image:
+      "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=800&q=80",
+  },
+  {
+    id: 2,
+    title: "Minimalist Series",
+    description: "The essence of clothing reduced to its simplest expression",
+    category: "Series",
+    image:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
+  },
+  {
+    id: 3,
+    title: "Signature Pieces",
+    description: "Iconic creations that define the brand's identity",
+    category: "Collection",
+    image:
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+  },
+  {
+    id: 4,
+    title: "Artisan Collaboration",
+    description: "Meeting of traditional craftsmanship and contemporary design",
+    category: "Special Project",
+    image:
+      "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=800&q=80",
+  },
+  {
+    id: 5,
+    title: "Fall 2023 Collection",
+    description: "Harmony between comfort and elegance in neutral tones",
+    category: "Collection",
+    image:
+      "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=800&q=80",
+  },
+  {
+    id: 6,
+    title: "Form Studies",
+    description: "Conceptual research on structure and volume",
+    category: "Research",
+    image:
+      "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?w=800&q=80",
+  },
 ];
 ---
 
 <section id="works" class="works">
-	<div class="container">
-		<h2>Créations</h2>
-		<div class="grid">
-			{works.map((work) => (
-				<article class="work-card">
-					<div class="work-image">
-						<div class="placeholder"></div>
-					</div>
-					<div class="work-info">
-						<span class="category">{work.category}</span>
-						<h3>{work.title}</h3>
-						<p>{work.description}</p>
-					</div>
-				</article>
-			))}
-		</div>
-	</div>
+  <div class="container">
+    <h2>Works</h2>
+    <div class="grid">
+      {
+        works.map((work) => (
+          <article class="work-card">
+            <div class="work-image">
+              <img src={work.image} alt={work.title} loading="lazy" />
+            </div>
+            <div class="work-info">
+              <span class="category">{work.category}</span>
+              <h3>{work.title}</h3>
+              <p>{work.description}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
 </section>
 
 <style>
-	.works {
-		min-height: 100vh;
-		padding: 6rem 2rem;
-		background-color: #ffffff;
-	}
+  .works {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background-color: #232e21;
+  }
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-	h2 {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		margin-bottom: 4rem;
-		font-weight: 200;
-		text-align: center;
-	}
+  .container h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 3rem;
+    font-weight: 200;
+    text-align: center;
+  }
 
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-		gap: 3rem;
-	}
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+  }
 
-	.work-card {
-		display: flex;
-		flex-direction: column;
-		transition: transform 0.3s ease;
-	}
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
 
-	.work-card:hover {
-		transform: translateY(-8px);
-	}
+  .work-card:hover {
+    transform: translateY(-8px);
+  }
 
-	.work-image {
-		aspect-ratio: 3 / 4;
-		overflow: hidden;
-		margin-bottom: 1.5rem;
-		background-color: #f0f0f0;
-	}
+  .work-image {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: rgba(232, 220, 200, 0.05);
+    border: 1px solid rgba(232, 220, 200, 0.15);
+  }
 
-	.placeholder {
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: transform 0.3s ease;
-	}
+  .work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
 
-	.work-card:hover .placeholder {
-		transform: scale(1.05);
-	}
+  .work-card:hover .work-image img {
+    transform: scale(1.05);
+  }
 
-	.work-info {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
+  .work-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-	.category {
-		font-size: 0.85rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #999;
-		font-weight: 500;
-	}
+  .category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(232, 220, 200, 0.5);
+    font-weight: 500;
+  }
 
-	h3 {
-		font-size: 1.4rem;
-		font-weight: 400;
-		margin-bottom: 0.5rem;
-	}
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
 
-	.work-info p {
-		font-size: 1rem;
-		color: #666;
-		line-height: 1.6;
-	}
+  .work-info p {
+    font-size: 0.95rem;
+    color: rgba(232, 220, 200, 0.7);
+    line-height: 1.6;
+  }
 </style>

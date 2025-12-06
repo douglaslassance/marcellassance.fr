@@ -1,92 +1,131 @@
 ---
+
 ---
 
 <nav class="navbar">
-	<div class="nav-container">
-		<a href="#home" class="logo">ML</a>
-		<ul class="nav-links">
-			<li><a href="#home">Accueil</a></li>
-			<li><a href="#about">À Propos</a></li>
-			<li><a href="#works">Créations</a></li>
-		</ul>
-	</div>
+  <div class="nav-container">
+    <a href="#home" class="logo">Marcel Lassance</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+    </ul>
+  </div>
 </nav>
 
+<script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const opacity = Math.min(scrollPosition / 300, 1);
+
+    if (navbar) {
+      navbar.style.setProperty("--nav-opacity", opacity.toString());
+    }
+  });
+
+  document.querySelectorAll('.navbar a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        const navHeight = 80;
+        const targetPosition = targetElement.offsetTop - navHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+</script>
+
 <style>
-	.navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1000;
-		background-color: rgba(255, 255, 255, 0.95);
-		backdrop-filter: blur(10px);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	}
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    --nav-opacity: 0;
+    background-color: rgba(42, 52, 40, calc(0.95 * var(--nav-opacity)));
+    backdrop-filter: blur(calc(10px * var(--nav-opacity)));
+    border-bottom: 1px solid
+      rgba(232, 220, 200, calc(0.15 * var(--nav-opacity)));
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease,
+      border-bottom 0.3s ease;
+  }
 
-	.nav-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 1.5rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-	.logo {
-		font-size: 1.5rem;
-		font-weight: 300;
-		color: var(--color-accent);
-		text-decoration: none;
-		letter-spacing: 0.1em;
-	}
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+    text-decoration: none;
+  }
 
-	.nav-links {
-		display: flex;
-		gap: 2.5rem;
-		list-style: none;
-	}
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
 
-	.nav-links a {
-		color: var(--color-text);
-		text-decoration: none;
-		font-size: 0.95rem;
-		font-weight: 400;
-		letter-spacing: 0.05em;
-		transition: color 0.3s ease;
-		position: relative;
-	}
+  .nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    position: relative;
+  }
 
-	.nav-links a::after {
-		content: '';
-		position: absolute;
-		bottom: -4px;
-		left: 0;
-		width: 0;
-		height: 1px;
-		background-color: var(--color-accent);
-		transition: width 0.3s ease;
-	}
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+  }
 
-	.nav-links a:hover {
-		color: var(--color-accent);
-	}
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
 
-	.nav-links a:hover::after {
-		width: 100%;
-	}
+  .nav-links a:hover::after {
+    width: 100%;
+  }
 
-	@media (max-width: 768px) {
-		.nav-container {
-			padding: 1rem 1.5rem;
-		}
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 1rem 1.5rem;
+    }
 
-		.nav-links {
-			gap: 1.5rem;
-		}
+    .nav-links {
+      gap: 1.5rem;
+    }
 
-		.nav-links a {
-			font-size: 0.85rem;
-		}
-	}
+    .nav-links a {
+      font-size: 0.85rem;
+    }
+  }
 </style>
