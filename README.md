@@ -1,46 +1,79 @@
-# Astro Starter Kit: Basics
+# Marcel Lassance - Website
 
-```sh
-npm create astro@latest -- --template basics
+A modern, elegant website for Marcel Lassance, créateur de vêtements (cloth designer), built with Astro.
+
+## Features
+
+- **Home Section**: Hero section with elegant typography
+- **About Section**: Information about Marcel Lassance and his creative approach
+- **Works Section**: Gallery showcasing collections and projects
+- **Footer**: Contact information and navigation
+
+## Tech Stack
+
+- **Astro** - Modern static site builder
+- **TypeScript** - Type-safe development
+- Responsive design with modern CSS
+
+## Getting Started
+
+### Install dependencies
+```bash
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Start development server
+```bash
+npm run dev
+```
 
-## 🚀 Project Structure
+The site will be available at `http://localhost:4321/`
 
-Inside of your Astro project, you'll see the following folders and files:
+### Build for production
+```bash
+npm run build
+```
 
-```text
+### Preview production build
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── public/          # Static assets
+├── src/
+│   ├── components/  # Reusable Astro components
+│   │   ├── Hero.astro
+│   │   ├── About.astro
+│   │   ├── Works.astro
+│   │   └── Footer.astro
+│   ├── layouts/     # Page layouts
+│   │   └── Layout.astro
+│   └── pages/       # Page routes
+│       └── index.astro
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Design Philosophy
 
-## 🧞 Commands
+The website reflects Marcel Lassance's minimalist aesthetic with:
+- Clean, modern typography
+- Elegant spacing and layout
+- Smooth transitions and interactions
+- Mobile-responsive design
+- Neutral color palette
 
-All commands are run from the root of the project, from a terminal:
+## Customization
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+To customize content, edit the components in `src/components/`:
+- Update works in `Works.astro`
+- Modify about text in `About.astro`
+- Change contact info in `Footer.astro`
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+© 2024 Marcel Lassance. All rights reserved.
+

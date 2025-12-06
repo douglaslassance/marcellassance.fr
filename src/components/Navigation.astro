@@ -1,0 +1,92 @@
+---
+---
+
+<nav class="navbar">
+	<div class="nav-container">
+		<a href="#home" class="logo">ML</a>
+		<ul class="nav-links">
+			<li><a href="#home">Accueil</a></li>
+			<li><a href="#about">À Propos</a></li>
+			<li><a href="#works">Créations</a></li>
+		</ul>
+	</div>
+</nav>
+
+<style>
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		background-color: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1.5rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: var(--color-accent);
+		text-decoration: none;
+		letter-spacing: 0.1em;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2.5rem;
+		list-style: none;
+	}
+
+	.nav-links a {
+		color: var(--color-text);
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 400;
+		letter-spacing: 0.05em;
+		transition: color 0.3s ease;
+		position: relative;
+	}
+
+	.nav-links a::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: var(--color-accent);
+		transition: width 0.3s ease;
+	}
+
+	.nav-links a:hover {
+		color: var(--color-accent);
+	}
+
+	.nav-links a:hover::after {
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		.nav-container {
+			padding: 1rem 1.5rem;
+		}
+
+		.nav-links {
+			gap: 1.5rem;
+		}
+
+		.nav-links a {
+			font-size: 0.85rem;
+		}
+	}
+</style>
