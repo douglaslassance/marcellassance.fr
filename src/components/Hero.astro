@@ -18,20 +18,20 @@ import { ChevronDown } from "lucide-astro";
 </section>
 
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      
+      const targetId = this.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         const navHeight = 80;
         const targetPosition = targetElement.offsetTop - navHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
@@ -45,7 +45,21 @@ import { ChevronDown } from "lucide-astro";
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #2a3428 0%, #384438 100%);
+    background:
+      radial-gradient(
+        ellipse at center,
+        transparent 0%,
+        transparent 30%,
+        rgba(42, 52, 40, 0.6) 70%,
+        #2a3428 100%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(42, 52, 40, 0.75) 0%,
+        rgba(56, 68, 56, 0.75) 100%
+      ),
+      url("/hero.jpg")
+        center/cover no-repeat;
     position: relative;
     padding: 2rem;
   }

@@ -6,27 +6,27 @@
   <div class="container">
     <h2>About</h2>
 
-    <section class="quote-section">
-      <div class="quote-container">
+    <div class="intro-section">
+      <div class="portrait">
+        <img src="/portrait.jpg" alt="Marcel Lassance" />
+      </div>
+      <div class="content">
         <blockquote class="quote">
           <p>
             "The only fashion that interests me is the one that doesn't go out
             of style."
           </p>
         </blockquote>
+        <p>
+          Marcel Lassance is a fashion designer whose work characterized by a
+          minimalist approach and particular attention to detail. His creative
+          universe explores the intersection between contemporary fashion and
+          traditional craftsmanship, creating timeless pieces that transcend
+          fleeting trends. Each creation is the result of deep reflection on form,
+          function and aesthetics, giving birth to garments that celebrate the
+          beauty of simplicity.
+        </p>
       </div>
-    </section>
-
-    <div class="content">
-      <p>
-        Marcel Lassance is a fashion designer whose work characterized by a
-        minimalist approach and particular attention to detail. His creative
-        universe explores the intersection between contemporary fashion and
-        traditional craftsmanship, creating timeless pieces that transcend
-        fleeting trends. Each creation is the result of deep reflection on form,
-        function and aesthetics, giving birth to garments that celebrate the
-        beauty of simplicity.
-      </p>
     </div>
 
     <div class="cards">
@@ -190,10 +190,14 @@
           <div class="timeline-year">1991</div>
           <div class="timeline-content">
             <p>
-              The opening of a Marcel Lassance store in Tokyo strengthens his
-              connection with Japanese culture and craftsmanship traditions.
-              This expansion allows him to deepen his understanding of different
-              approaches to quality and attention to detail.
+              The opening of a Marcel Lassance store in Tokyo in collaboration
+              with <a
+                href="https://www.shipsltd.co.jp"
+                target="_blank"
+                rel="noopener noreferrer">SHIPS</a
+              > strengthens his connection with Japanese culture and craftsmanship
+              traditions. This expansion allows him to deepen his understanding of
+              different approaches to quality and attention to detail.
             </p>
           </div>
         </div>
@@ -203,10 +207,11 @@
           <div class="timeline-content">
             <p>
               Marcel focuses on the steady development of his line across France
-              and Japan, refining his approach to comfortable luxury and
-              sustainable practices. This period allows for thoughtful growth
-              and the cultivation of long-term relationships with artisans and
-              clients alike.
+              and Japan, opening more stores (Daikanyama, Ginza, Osaka, Nagoya)
+              and refining his approach to comfortable luxury and sustainable
+              practices. This period allows for thoughtful growth and the
+              cultivation of long-term relationships with artisans and clients
+              alike.
             </p>
           </div>
         </div>
@@ -225,13 +230,21 @@
                 href="https://journal.apolisglobal.com/journal/people-marcel-lassance-french-menswear-favorite/"
                 >share his perspective on timeless design</a
               >
-              with a new generation of conscious creators and consumers.
+              with a new generation of conscious creators (<a
+                href="https://www.rdvoglobe.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer">RDV au Globe</a
+              >, <a
+                href="https://industryofallnations.com"
+                target="_blank"
+                rel="noopener noreferrer">Industry of All Nations</a
+              >, etc.) and consumers.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-year">2020</div>
+          <div class="timeline-year">Today</div>
           <div class="timeline-content">
             <p>
               Marcel begins a meaningful collaboration with his friend Déborah
@@ -241,7 +254,12 @@
                 rel="noopener noreferrer">De Bonne Facture</a
               >, sharing his experience in craftsmanship and design philosophy.
               This partnership represents a continuation of his commitment to
-              supporting thoughtful approaches to fashion and business.
+              supporting thoughtful approaches to fashion and business. Marcel
+              Lassance continues to develop his line for <a
+                href="https://www.shipsltd.co.jp"
+                target="_blank"
+                rel="noopener noreferrer">SHIPS</a
+              > with as much passion as ever.
             </p>
           </div>
         </div>
@@ -271,10 +289,59 @@
     text-align: center;
   }
 
+  .intro-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .quote {
+    text-align: left;
+    border-left: none;
+    margin: 0 0 1rem 0;
+  }
+
+  .quote p {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-accent);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .portrait {
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
 
   p {
@@ -422,23 +489,5 @@
     .timeline-item {
       padding-left: 2rem;
     }
-  }
-
-  .quote-section {
-    min-height: 10vh;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .quote {
-    text-align: center;
-  }
-
-  .quote p {
-    font-family: var(--font-serif);
-    font-size: clamp(0.9rem, 2vw, 1.4rem);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-accent);
   }
 </style>
