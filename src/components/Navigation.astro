@@ -2,13 +2,13 @@
 
 ---
 
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#home" class="logo">Marcel Lassance</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#works">Works</a></li>
+<nav class="navbar fixed top-0 left-0 right-0 z-[1000] transition-all duration-300">
+  <div class="max-w-[1000px] mx-auto px-8 py-6 flex justify-between items-center">
+    <a href="#home" class="text-2xl font-light font-[var(--font-serif)] text-[var(--color-accent)] no-underline uppercase">Marcel Lassance</a>
+    <ul class="flex gap-10 list-none">
+      <li><a href="#home" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">Home</a></li>
+      <li><a href="#about" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">About</a></li>
+      <li><a href="#works" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">Works</a></li>
     </ul>
   </div>
 </nav>
@@ -21,7 +21,9 @@
     const opacity = Math.min(scrollPosition / 300, 1);
 
     if (navbar) {
-      navbar.style.setProperty("--nav-opacity", opacity.toString());
+      navbar.style.backgroundColor = `rgba(42, 52, 40, ${0.95 * opacity})`;
+      navbar.style.backdropFilter = `blur(${10 * opacity}px)`;
+      navbar.style.borderBottom = `1px solid rgba(232, 220, 200, ${0.15 * opacity})`;
     }
   });
 
@@ -46,86 +48,16 @@
 </script>
 
 <style>
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    --nav-opacity: 0;
-    background-color: rgba(42, 52, 40, calc(0.95 * var(--nav-opacity)));
-    backdrop-filter: blur(calc(10px * var(--nav-opacity)));
-    border-bottom: 1px solid
-      rgba(232, 220, 200, calc(0.15 * var(--nav-opacity)));
-    transition:
-      background-color 0.3s ease,
-      backdrop-filter 0.3s ease,
-      border-bottom 0.3s ease;
-  }
-
-  .nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 300;
-    font-family: var(--font-serif);
-    color: var(--color-accent);
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--color-text);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-
-  .nav-links a::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--color-accent);
-    transition: width 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: var(--color-accent);
-  }
-
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-
   @media (max-width: 768px) {
-    .nav-container {
+    .navbar > div {
       padding: 1rem 1.5rem;
     }
-
-    .nav-links {
+    
+    .navbar ul {
       gap: 1.5rem;
     }
-
-    .nav-links a {
+    
+    .nav-link {
       font-size: 0.85rem;
     }
   }

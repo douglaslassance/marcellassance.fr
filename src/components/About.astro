@@ -2,23 +2,23 @@
 
 ---
 
-<section id="about" class="about">
-  <div class="container">
-    <h2>About</h2>
-    <hr class="section-divider" />
+<section id="about" class="min-h-screen flex items-center py-16 px-8 bg-[var(--color-bg)]">
+  <div class="max-w-[1000px] mx-auto w-full">
+    <h2 class="text-[clamp(2rem,4vw,2.5rem)] mb-6 font-extralight text-center">About</h2>
+    <hr class="w-20 h-0.5 border-0 bg-gradient-to-r from-transparent via-[#f5ead6] to-transparent mx-auto mb-12" />
 
-    <div class="intro-section">
-      <div class="portrait">
-        <img src="/portrait.jpg" alt="Marcel Lassance" />
+    <div class="grid grid-cols-3 gap-8 items-start mb-16 max-lg:grid-cols-1 max-lg:gap-8">
+      <div class="w-full aspect-[3/4] overflow-hidden rounded cursor-pointer max-lg:max-w-[300px] max-lg:mx-auto group">
+        <img src="/portrait.jpg" alt="Marcel Lassance" class="w-full h-full object-cover transition-transform duration-400 group-hover:scale-110" />
       </div>
-      <div class="content">
-        <blockquote class="quote">
-          <p>
+      <div class="col-span-2 flex flex-col gap-6 justify-start max-lg:col-span-1">
+        <blockquote class="text-left border-0 m-0 mb-4">
+          <p class="font-[var(--font-serif)] text-[clamp(1rem,1.9vw,1.35rem)] font-light italic text-[var(--color-accent)] leading-[1.4]">
             "The only fashion that interests me is the one that doesn't go out
             of style."
           </p>
         </blockquote>
-        <p>
+        <p class="text-[clamp(0.95rem,1.5vw,1.05rem)] leading-[1.8] text-[var(--color-text)]">
           Marcel Lassance is a fashion designer whose work characterized by a
           minimalist approach and particular attention to detail. His creative
           universe explores the intersection between contemporary fashion and
@@ -30,10 +30,10 @@
       </div>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Structure</h3>
-        <p>
+    <div class="grid grid-cols-3 gap-8 mt-16 max-lg:grid-cols-1">
+      <div class="card bg-[rgba(255,255,255,0.03)] p-8 rounded-lg border border-[rgba(255,255,255,0.1)] shadow-[0_2px_8px_rgba(0,0,0,0.2)] opacity-0 translate-y-8 transition-all duration-600 hover:-translate-y-1 hover:shadow-[0_4px_16px_rgba(0,0,0,0.4)] hover:border-[rgba(255,255,255,0.2)]">
+        <h3 class="text-[clamp(1.3rem,2.5vw,1.5rem)] font-light mb-4 text-[var(--color-accent)]">Structure</h3>
+        <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7]">
           He approaches the traditional suit with a thoughtful reconsideration
           of structure, gently deconstructing jackets to prioritize comfort and
           natural movement. By removing heavy linings and excessive padding, the
@@ -43,9 +43,9 @@
         </p>
       </div>
 
-      <div class="card">
-        <h3>Materials</h3>
-        <p>
+      <div class="card bg-[rgba(255,255,255,0.03)] p-8 rounded-lg border border-[rgba(255,255,255,0.1)] shadow-[0_2px_8px_rgba(0,0,0,0.2)] opacity-0 translate-y-8 transition-all duration-600 hover:-translate-y-1 hover:shadow-[0_4px_16px_rgba(0,0,0,0.4)] hover:border-[rgba(255,255,255,0.2)]">
+        <h3 class="text-[clamp(1.3rem,2.5vw,1.5rem)] font-light mb-4 text-[var(--color-accent)]">Materials</h3>
+        <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7]">
           His commitment to natural materials reflects a deep appreciation for
           both quality and sustainability. Working exclusively with noble fibers
           such as wool, cotton, and linen, he seeks fabrics that offer inherent
@@ -55,9 +55,9 @@
         </p>
       </div>
 
-      <div class="card">
-        <h3>Colors</h3>
-        <p>
+      <div class="card bg-[rgba(255,255,255,0.03)] p-8 rounded-lg border border-[rgba(255,255,255,0.1)] shadow-[0_2px_8px_rgba(0,0,0,0.2)] opacity-0 translate-y-8 transition-all duration-600 hover:-translate-y-1 hover:shadow-[0_4px_16px_rgba(0,0,0,0.4)] hover:border-[rgba(255,255,255,0.2)]">
+        <h3 class="text-[clamp(1.3rem,2.5vw,1.5rem)] font-light mb-4 text-[var(--color-accent)]">Colors</h3>
+        <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7]">
           He thoughtfully explores a broader spectrum of colors in menswear,
           challenging conventional boundaries with quiet confidence. His palette
           includes nuanced bronze-green blazers, subtle purple knitwear, and
@@ -67,13 +67,13 @@
       </div>
     </div>
 
-    <div class="timeline">
-      <h3>Timeline</h3>
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="timeline-year">1971</div>
-          <div class="timeline-content">
-            <p>
+    <div class="mt-24 max-w-[900px] mx-auto">
+      <h3 class="text-[clamp(1.8rem,3vw,2.2rem)] font-light text-center mb-16 text-[var(--color-accent)]">Timeline</h3>
+      <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[rgba(232,220,200,0.3)] before:to-transparent">
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1971</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Marcel begins his career as a fabric designer in the creative
               heart of Saint-Germain-des-Prés, learning the fundamentals of
               textile artistry and developing his eye for natural materials and
@@ -82,10 +82,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1973</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1973</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               The opening of his first boutique in Paris marks a humble
               beginning that gradually attracts attention from the entertainment
               industry. Word spreads quietly about his unique approach to
@@ -95,10 +95,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1976</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1976</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Expanding to a larger space in Saint-Germain-des-Prés allows
               Marcel to fully express his design philosophy. The new store
               becomes a quiet destination for those seeking thoughtfully
@@ -108,10 +108,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1978</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1978</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Marcel presents his work at Club des Créateurs, sharing his vision
               of deconstructed tailoring with the fashion community. The
               presentation reflects his belief that true luxury lies in comfort
@@ -120,10 +120,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1979</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1979</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               An exhibition at Designers Collective in New York introduces
               Marcel's philosophy to American audiences. This leads to
               partnerships with respected retailers including Macy's, Saks,
@@ -133,10 +133,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1981</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1981</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Publicist Jacques Séguéla invites Marcel to design for François
               Mitterrand's presidential campaign, seeking to embody "La Force
               Tranquille" (The Quiet Strength). This collaboration demonstrates
@@ -146,10 +146,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1982</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1982</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Marcel begins collaborating with distinguished film directors
               including Bob Swaim, Claude Miller, Claude Zidi, Claude Chabrol,
               Claude Lelouch, and Costa-Gavras, among others. His costume work
@@ -159,10 +159,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1983</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1983</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               The first licensing agreements in Japan mark an important
               milestone. Marcel finds that his emphasis on natural materials and
               comfortable construction resonates deeply with Japanese consumers
@@ -171,15 +171,16 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1986</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1986</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               A unique collaboration with Swedish manufacturer Saab results in
               an exclusive <a
                 href="https://en.wikipedia.org/wiki/Saab_900"
                 target="_blank"
-                rel="noopener noreferrer">Saab 900</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">Saab 900</a
               > Turbo 16S convertible, showcased at the 1987 Geneva Motor Show. This
               project explores how design principles can transcend fashion to influence
               other creative industries.
@@ -187,15 +188,16 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1991</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1991</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               The opening of a Marcel Lassance store in Tokyo in collaboration
               with <a
                 href="https://www.shipsltd.co.jp"
                 target="_blank"
-                rel="noopener noreferrer">SHIPS</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">SHIPS</a
               > strengthens his connection with Japanese culture and craftsmanship
               traditions. This expansion allows him to deepen his understanding of
               different approaches to quality and attention to detail.
@@ -203,10 +205,10 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">1992-2009</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">1992-2009</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Marcel focuses on the steady development of his line across France
               and Japan, opening more stores (Daikanyama, Ginza, Osaka, Nagoya)
               and refining his approach to comfortable luxury and sustainable
@@ -217,49 +219,55 @@
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">2010</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-12 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">2010</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               At the invitation of <a
                 href="https://en.wikipedia.org/wiki/Marie-France_Cohen"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]"
                 >Marie-France</a
               > and Bernard Cohen, Marcel takes the role of art director for the men's
               line at
-              <a href="https://www.merci-merci.com/">MERCI</a>. This
+              <a href="https://www.merci-merci.com/" class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">MERCI</a>. This
               collaboration allows him to <a
                 href="https://journal.apolisglobal.com/journal/people-marcel-lassance-french-menswear-favorite/"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]"
                 >share his perspective on timeless design</a
               >
               with a new generation of conscious creators (<a
                 href="https://www.rdvoglobe.co.jp/"
                 target="_blank"
-                rel="noopener noreferrer">RDV au Globe</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">RDV au Globe</a
               >, <a
                 href="https://industryofallnations.com"
                 target="_blank"
-                rel="noopener noreferrer">Industry of All Nations</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">Industry of All Nations</a
               >, etc.) and consumers.
             </p>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-year">Today</div>
-          <div class="timeline-content">
-            <p>
+        <div class="timeline-item relative pl-12 pb-0 before:content-[''] before:absolute before:left-[-1px] before:top-[0.6em] before:w-3 before:h-3 before:rounded-full before:bg-[var(--color-accent)] before:shadow-[0_0_0_4px_var(--color-bg),0_0_0_5px_rgba(232,220,200,0.3)] before:-translate-x-1/2">
+          <div class="font-[var(--font-serif)] text-[clamp(0.9rem,1.5vw,1.125rem)] font-normal text-[var(--color-accent)] mb-2 leading-[1.4]">Today</div>
+          <div>
+            <p class="text-[clamp(0.9rem,1.5vw,1rem)] leading-[1.7] text-[var(--color-text)]">
               Marcel begins a meaningful collaboration with his friend Déborah
               Sitbon Neuberg from <a
                 href="https://www.debonnefacture.fr"
                 target="_blank"
-                rel="noopener noreferrer">De Bonne Facture</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">De Bonne Facture</a
               >, sharing his experience in craftsmanship and design philosophy.
               This partnership represents a continuation of his commitment to
               supporting thoughtful approaches to fashion and business. Marcel
               Lassance continues to develop his line for <a
                 href="https://www.shipsltd.co.jp"
                 target="_blank"
-                rel="noopener noreferrer">SHIPS</a
+                rel="noopener noreferrer"
+                class="text-[var(--color-link)] no-underline border-b border-[rgba(212,165,116,0.3)] transition-all duration-300 hover:text-[var(--color-link-hover)] hover:border-[var(--color-link-hover)]">SHIPS</a
               > with as much passion as ever.
             </p>
           </div>
@@ -290,157 +298,6 @@
 </script>
 
 <style>
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 2rem;
-    background-color: var(--color-bg);
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .container h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-bottom: 1.5rem;
-    font-weight: 200;
-    text-align: center;
-  }
-
-  .section-divider {
-    width: 80px;
-    height: 2px;
-    border: none;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      #f5ead6 50%,
-      transparent 100%
-    );
-    margin: 0 auto 3rem;
-  }
-
-  .intro-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
-    margin-bottom: 4rem;
-  }
-
-  .portrait {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-
-  .portrait:hover img {
-    transform: scale(1.08);
-  }
-
-  .content {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: flex-start;
-  }
-
-  .quote {
-    text-align: left;
-    border-left: none;
-    margin: 0 0 1rem 0;
-  }
-
-  .quote p {
-    font-family: var(--font-serif);
-	font-size: clamp(1rem, 1.9vw, 1.35rem);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--color-accent);
-    line-height: 1.4;
-  }
-
-  @media (max-width: 1024px) {
-    .intro-section {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .content {
-      grid-column: span 1;
-    }
-
-    .portrait {
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .cards {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  p {
-    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-    line-height: 1.8;
-    color: var(--color-text);
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
-  }
-
-  @media (max-width: 1024px) {
-    .intro-section {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .content {
-      grid-column: span 1;
-    }
-
-    .portrait {
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .cards {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(30px);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out,
-      box-shadow 0.3s ease,
-      border-color 0.3s ease;
-  }
-
   .card.animate {
     opacity: 1;
     transform: translateY(0);
@@ -458,114 +315,8 @@
     transition-delay: 0.3s;
   }
 
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .card h3 {
-    font-size: clamp(1.3rem, 2.5vw, 1.5rem);
-    font-weight: 300;
-    margin-bottom: 1rem;
-    color: var(--color-accent);
-  }
-
-  .card p {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    line-height: 1.7;
-  }
-
-  .timeline {
-    margin-top: 6rem;
-    max-width: 900px;
-    margin-left: auto;``
-    margin-right: auto;
-  }
-
-  .timeline h3 {
-    font-size: clamp(1.8rem, 3vw, 2.2rem);
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: var(--color-accent);
-  }
-
-  .timeline-items {
-    position: relative;
-    padding-left: 2rem;
-  }
-
-  .timeline-items::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(232, 220, 200, 0.3) 10%,
-      rgba(232, 220, 200, 0.3) 90%,
-      transparent 100%
-    );
-  }
-
-  .timeline-item {
-    position: relative;
-    padding-left: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .timeline-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 0.6em;
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    box-shadow:
-      0 0 0 4px var(--color-bg),
-      0 0 0 5px rgba(232, 220, 200, 0.3);
-    transform: translateX(-50%);
-  }
-
-  .timeline-year {
-    font-family: var(--font-serif);
-	font-size: clamp(0.9rem, 1.5vw, 1.125rem);
-    font-weight: 400;
-    color: var(--color-accent);
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-  }
-
-  .timeline-content p {
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
-    line-height: 1.7;
-    color: var(--color-text);
-  }
-
-  .timeline-content a {
-    color: var(--color-link);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.3);
-    transition: all 0.3s ease;
-  }
-
-  .timeline-content a:hover {
-    color: var(--color-link-hover);
-    border-bottom-color: var(--color-link-hover);
-  }
-
   @media (max-width: 768px) {
-    .timeline-items {
+    .timeline > div {
       padding-left: 1rem;
     }
 
