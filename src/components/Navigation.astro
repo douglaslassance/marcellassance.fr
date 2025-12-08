@@ -2,13 +2,34 @@
 
 ---
 
-<nav class="navbar fixed top-0 left-0 right-0 z-[1000] transition-all duration-300">
-  <div class="max-w-[1000px] mx-auto px-8 py-6 flex justify-between items-center">
-    <a href="#home" class="text-2xl font-light font-[var(--font-serif)] text-[var(--color-accent)] no-underline uppercase">Marcel Lassance</a>
+<nav
+  class="navbar fixed top-0 left-0 right-0 z-[1000] transition-all duration-300"
+>
+  <div
+    class="max-w-[1000px] mx-auto px-8 py-6 flex justify-between items-center"
+  >
+    <a href="#home" class="flex items-center">
+      <img src="/logo.svg" alt="Marcel Lassance" class="h-16 w-48 brightness-0 invert" style="filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(446%) hue-rotate(343deg) brightness(98%) contrast(91%);" />
+    </a>
     <ul class="flex gap-10 list-none">
-      <li><a href="#home" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">Home</a></li>
-      <li><a href="#about" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">About</a></li>
-      <li><a href="#works" class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full">Works</a></li>
+      <li>
+        <a
+          href="#home"
+          class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full"
+          >Home</a>
+      </li>
+      <li>
+        <a
+          href="#about"
+          class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full"
+          >About</a>
+      </li>
+      <li>
+        <a
+          href="#works"
+          class="nav-link text-[var(--color-text)] no-underline text-[0.95rem] font-normal tracking-wider transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[var(--color-accent)] after:transition-all after:duration-300 hover:text-[var(--color-accent)] hover:after:w-full"
+          >Works</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -52,11 +73,11 @@
     .navbar > div {
       padding: 1rem 1.5rem;
     }
-    
+
     .navbar ul {
       gap: 1.5rem;
     }
-    
+
     .nav-link {
       font-size: 0.85rem;
     }

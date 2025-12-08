@@ -6,25 +6,49 @@ const currentYear = new Date().getFullYear();
 
 <footer class="bg-[#e8dcc8] text-[#232e21] pt-16 pb-8 px-8">
   <div class="max-w-[1000px] mx-auto">
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-12 mb-12">
-      <div>
-        <h3 class="text-2xl mb-2 font-light font-[var(--font-serif)] normal-case">Marcel Lassance</h3>
-        <p class="text-[rgba(35,46,33,0.7)] leading-[1.8]">Paris</p>
+    <div
+      class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-12 mb-12"
+    >
+      <div class="flex flex-col">
+        <img src="/logo.svg" alt="Marcel Lassance" class="h-24 w-60 object-contain object-left-top" style="filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(1463%) hue-rotate(74deg) brightness(96%) contrast(92%);" />
       </div>
 
       <div>
-        <h4 class="text-base mb-4 font-medium uppercase tracking-[0.1em] text-[rgba(35,46,33,0.5)]">Navigation</h4>
+        <h4
+          class="text-base mb-4 font-medium uppercase tracking-[0.1em] text-[rgba(35,46,33,0.5)]"
+        >
+          Navigation
+        </h4>
         <nav class="flex flex-col gap-3">
-          <a href="#home" class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]">Home</a>
-          <a href="#about" class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]">About</a>
-          <a href="#works" class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]">Works</a>
+          <a
+            href="#home"
+            class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]"
+            >About</a
+          >
+          <a
+            href="#works"
+            class="text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]"
+            >Works</a
+          >
         </nav>
       </div>
 
       <div>
-        <h4 class="text-base mb-4 font-medium uppercase tracking-[0.1em] text-[rgba(35,46,33,0.5)]">Contact</h4>
+        <h4
+          class="text-base mb-4 font-medium uppercase tracking-[0.1em] text-[rgba(35,46,33,0.5)]"
+        >
+          Contact
+        </h4>
         <p class="text-[rgba(35,46,33,0.7)] leading-[1.8]">Paris, France</p>
-        <a href="mailto:contact@marcellassance.fr" class="flex items-center gap-2 mt-2 text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]">
+        <a
+          href="mailto:contact@marcellassance.fr"
+          class="flex items-center gap-2 mt-2 text-[rgba(35,46,33,0.7)] no-underline transition-colors duration-300 hover:text-[#232e21]"
+        >
           <Mail size={18} class="shrink-0" />
           <span>info@marcellassance.fr</span>
         </a>
@@ -41,26 +65,28 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <div class="pt-8 border-t border-[rgba(35,46,33,0.15)] text-center">
-      <p class="text-[rgba(35,46,33,0.5)] text-[0.9rem]">&copy; {currentYear} Marcel Lassance. All rights reserved.</p>
+      <p class="text-[rgba(35,46,33,0.5)] text-[0.9rem]">
+        &copy; {currentYear} Marcel Lassance. All rights reserved.
+      </p>
     </div>
   </div>
 </footer>
 
 <script>
-  document.querySelectorAll('.footer a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('.footer a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      
+      const targetId = this.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         const navHeight = 80;
         const targetPosition = targetElement.offsetTop - navHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
