@@ -11,7 +11,14 @@
     <a href="#home" class="flex items-center">
       <img src="/logo.svg" alt="Marcel Lassance" class="h-16 w-48 brightness-0 invert" style="filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(446%) hue-rotate(343deg) brightness(98%) contrast(91%);" />
     </a>
-    <ul class="flex gap-10 list-none">
+    
+    <button class="menu-toggle hidden" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </button>
+
+    <ul class="nav-menu flex gap-10 list-none">
       <li>
         <a
           href="#home"
@@ -36,6 +43,8 @@
 
 <script>
   const navbar = document.querySelector(".navbar");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
 
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
@@ -48,11 +57,19 @@
     }
   });
 
+  menuToggle?.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navMenu?.classList.toggle("active");
+  });
+
   document.querySelectorAll('.navbar a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       if (!targetId || targetId === "#") return;
+
+      menuToggle?.classList.remove("active");
+      navMenu?.classList.remove("active");
 
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
@@ -69,17 +86,80 @@
 </script>
 
 <style>
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.15s ease;
+  }
+
+  .menu-toggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
   @media (max-width: 768px) {
     .navbar > div {
       padding: 1rem 1.5rem;
     }
 
-    .navbar ul {
-      gap: 1.5rem;
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      flex-direction: column;
+      background-color: #e8dcc8;
+      backdrop-filter: blur(10px);
+      width: 250px;
+      padding: 2rem;
+      gap: 2rem !important;
+      transition: right 0.15s ease;
+      border-left: 1px solid rgba(35, 46, 33, 0.15);
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
     }
 
     .nav-link {
-      font-size: 0.85rem;
+      font-size: 1rem;
+      display: block;
+      padding: 0.5rem 0;
+      color: rgba(35, 46, 33, 0.7) !important;
+    }
+
+    .nav-link:hover {
+      color: #232e21 !important;
+    }
+
+    .nav-link::after {
+      background-color: #232e21 !important;
     }
   }
 </style>
