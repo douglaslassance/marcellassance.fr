@@ -68,6 +68,10 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+        env:
+          # Lets the Sentry plugin upload source maps, so stack traces point at real
+          # code rather than the minified bundle. The build still succeeds without it.
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
