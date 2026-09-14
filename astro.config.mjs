@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     sentry({
       org: 'douglaslassance',
-      project: 'marcellassance',
+      project: 'marcellassance-fr',
       // Only needed at build time, to upload source maps. Absent locally, which
       // makes the plugin skip the upload and carry on.
       authToken: process.env.SENTRY_AUTH_TOKEN,
